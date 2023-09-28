@@ -1,0 +1,17 @@
+<form action="grados.component.ts">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <h1>Convertir a:</h1>
+                <input type="radio" id="celsius" value="celsius" name="fav"><label for="">Celsius</label><br>
+                <input type="radio" id="fahrenheit" value="fahrenheit" name="fav"><label for="">Fahrenheit</label><br>
+                <label for="temperatura" class="form-label">Ingrese temperatura:</label>
+                <input type="text" [(ngModel)]='temperatura' class="form-control" name="temperatura" placeholder="Ingrese la temperatura">
+                <button class="btn btn-primary" value="Submit" type="submit" (click)="convertirGrados()">Convertir</button>
+            </div>
+        </div>
+        <div class="col-6">
+            <h2>Conversión: {{conversion}} </h2>
+        </div>
+    </div>
+</form>
