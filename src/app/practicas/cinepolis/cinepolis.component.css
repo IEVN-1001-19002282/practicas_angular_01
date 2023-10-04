@@ -1,0 +1,44 @@
+body{
+    background-image: url('https://www.towncenterelrosario.com.mx/wp-content/uploads/2019/07/cinepolislogo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: white;
+    
+}
+
+.entradas{
+    border: solid 2px rgb(255, 255, 255);
+    margin-left: 12%;
+    z-index: 2;
+}
+
+.salidas{
+    border: solid 2px rgb(255, 255, 255);
+    margin-left: 12%;
+}
+
+.title{
+    text-align: center;
+}
+
+.acciones{
+    margin-left: 450px;
+    margin-top: 100px;
+    
+}
+
+.actions{
+    border: solid 2px rgb(255, 255, 255);
+}
+
+.btn{
+    margin: 50px;
+}
+
+.titEnt{
+    z-index: 1;
+    margin-left: 150px;
+    position: relative;
+    float: none;
+}

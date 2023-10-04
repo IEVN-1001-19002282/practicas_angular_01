@@ -1,0 +1,50 @@
+<body>
+    <div class="container">
+        <h1 class="title">Cinepolis</h1>
+    <div class="row">
+      <h1 class="titEnt">Entradas</h1>
+        <div class="col-4 entradas">
+            <form action="cinepolis.component.ts"> 
+                <label for="" class="col-form-label col-form-label-sm">Nombre</label>
+            <div class="col-sm-10">
+          <input type="text" class="form-control form-control-sm" id="colFormLabelSm" [(ngModel)]="nombre" name="nombre" placeholder="">
+            </div>
+            <label for="" class="col-form-label">Cantidad Compradores</label>
+            <div class="col-sm-10">
+          <input type="number" class="form-control form-control-sm" id="colFormLabelSm" [(ngModel)]="cantCompr" name="cantCompr" placeholder="">
+            </div>
+            <label for="espera">tarjeta Cinecon</label> <br>
+            <div *ngFor="let t of tarjeta" class="form-check form-check-inline"> <br>
+                <input class="form-check-input" [(ngModel)]="valorT" [value]="t.valor" type="radio" name="valor">
+                <label class="form-check-label" for=""> {{t.nombre}} </label>
+              </div>
+               <br>
+              <label for="espera" class="col-form-label">Cantidad Boletos</label>
+            <div class="col-sm-10">
+          <input type="number" class="form-control form-control-sm" id="cant" [(ngModel)]="cantBol" name="cantBol" placeholder="">
+            </div>
+            </form>
+        </div>
+        <div class="col-4 salidas">
+            <form action="">
+                <h1>Salidas</h1>
+                <label for="" class="col-sm-2 col-form-label">Valor a pagar</label>
+                <h2> {{mensaje}} </h2>
+                <h2> {{nombre}} </h2>
+            <div class="col-sm-10">
+          <input type="email" class="form-control form-control-sm" id="colFormLabelSm" [(ngModel)]="total" name="total" [placeholder]="total">
+         <h2>Cantidad de boletos adquiridos: {{cantBol}} </h2>
+            </div>
+            </form>
+        </div>
+        <div class="col-12 acciones">
+            <div class="col-4 actions">
+                    <h2>Acciones</h2>
+                    <button type="submit" class="btn btn-primary my-1" (click)="calculoPrecio()">Procesar</button>
+                    <button type="submit" class="btn btn-primary my-1">Salir</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+</body>
